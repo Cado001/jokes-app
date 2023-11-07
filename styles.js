@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
     punchlineText: {
         color: '#00d',
         fontSize: 30,
+        textAlign: 'center'
     },
 })
 
