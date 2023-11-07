@@ -12,16 +12,16 @@ export default function JokesList(){
         .then(res => res.json())
         .then(setJokes)
         .catch(alert)
-
+        .finally(shuffleJokes)
     },[])
 
     const shuffleJokes = (array) => {
-        for(let i = array.length - 1; i > 0; i--) {
-            const j =Math.floor(Math.random() * (i + 1));
-            [array[i], array[j] = [array[j], array[i]]]
-        }
-        return array;
+        
+            const j =Math.floor(Math.random() * jokes.length)
+            setCurrentJoke(j)
     }
+        
+    
 
     const nextJoke = () => {
         if (currentJoke < jokes.length - 1){
